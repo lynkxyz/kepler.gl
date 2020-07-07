@@ -53,7 +53,7 @@ export {default as TextLabelPanelFactory} from './side-panel/layer-panel/text-la
 
 export {default as SourceDataCatalogFactory} from './side-panel/common/source-data-catalog';
 export {default as SourceDataSelectorFactory} from './side-panel/common/source-data-selector';
-export {default as DatasetTitleFactory} from './side-panel/common/dataset-title';
+export {default as DatasetTitleFactory, DataTagAction, StyledDatasetTitle} from './side-panel/common/dataset-title';
 export {default as DatasetInfoFactory} from './side-panel/common/dataset-info';
 export {default as DatasetTagFactory} from './side-panel/common/dataset-tag';
 

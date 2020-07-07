@@ -28,7 +28,7 @@ import DatasetTagFactory from 'components/side-panel/common/dataset-tag';
 
 function nop() {}
 
-const StyledDatasetTitle = styled.div`
+export const StyledDatasetTitle = styled.div`
   color: ${props => props.theme.textColor};
   display: flex;
   align-items: flex-start;
@@ -54,7 +54,7 @@ const StyledDatasetTitle = styled.div`
   }
 `;
 
-const DataTagAction = styled.div`
+export const DataTagAction = styled.div`
   margin-left: 12px;
   height: 16px;
   opacity: 0;
@@ -117,7 +117,8 @@ export default function DatasetTitleFactory(DatasetTag) {
         showDeleteDataset,
         onTitleClick,
         removeDataset,
-        dataset
+        dataset,
+        renderItems
       } = this.props;
 
       return (
@@ -137,6 +138,7 @@ export default function DatasetTitleFactory(DatasetTag) {
           {showDeleteDataset ? (
             <RemoveDataset datasetKey={dataset.id} removeDataset={removeDataset} />
           ) : null}
+          {renderItems && renderItems(dataset)}
         </StyledDatasetTitle>
       );
     }
